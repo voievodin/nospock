@@ -1,0 +1,10 @@
+rootProject.name = 'nospock'
+include 'translator'
+include 'jast'
+include 'tests'
+include 'spiimpl-assertion-junit'
+include 'spiimpl-mock-mockito'
+include 'spiimpl-engine-junit'
+include 'intellij-plugin'
+include 'cmd'
+

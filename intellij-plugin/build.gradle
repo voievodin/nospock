@@ -1,0 +1,27 @@
+plugins {
+    id 'org.jetbrains.intellij' version '1.8.0'
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version = '2021.2.3'
+
+}
+patchPluginXml {
+    changeNotes = """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+
+    sinceBuild = "212"
+    untilBuild = "223"
+}

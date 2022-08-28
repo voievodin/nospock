@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>com.yevhenii.nospock.intellijplugin</id>
+    <name>NoSpock</name>
+    <vendor url="http://github.com/voievodin/nospock">Github</vendor>
+
+    <description><![CDATA[
+    Converts spock tests (or arbitrary groovy files) to java.
+    By default converts to junit + mockito. <br/>
+    Check NoSpock settings page for configuration options.
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable
+                parentId="tools"
+                instance="com.yevhenii.nospock.settings.NoSpockSettingsConfigurable"
+                id="com.yevhenii.nospock.settings.NoSpockSettingsConfigurable"
+                displayName="NoSpock Settings"/>
+        <applicationService serviceImplementation="com.yevhenii.nospock.settings.NoSpockSettings"/>
+        <notificationGroup id="nospock" displayType="NONE"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.yevhenii.nospock.ConvertSpockToJavaTestAction"
+                class="com.yevhenii.nospock.ConvertSpockToJavaTestAction"
+                text="Spock to Java ☕">
+            <add-to-group group-id="RefactoringMenu" anchor="last"/>
+            <keyboard-shortcut first-keystroke="shift alt J" keymap="$default"/>
+        </action>
+    </actions>
+</idea-plugin>
+ 

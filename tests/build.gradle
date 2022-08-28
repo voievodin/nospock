@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation project(":translator")
+    testImplementation project(":spiimpl-assertion-junit")
+    testImplementation project(":spiimpl-engine-junit")
+    testImplementation project(":spiimpl-mock-mockito")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testImplementation "org.spockframework:spock-core:2.0-groovy-3.0"
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    systemProperty "java.util.logging.SimpleFormatter.format", '[%1$tF %1$tT] [%4$-4s] %5$s %n'  
+
+    useJUnitPlatform()
+}
