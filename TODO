@@ -3,4 +3,7 @@
 - variable x that is used throughput the method must have type preserved so resolvedType() can be used to e.g. adjust types when passing arguments
 - [p] reusable type adjustments base in different places, argument translation is adjusted for everything that has arguments
 - [p] 'String asCode' -> 'Code asCode' with ability to reformat long lines in generic way
-- var x = getX() <- does not derive x type to be getX() return value 
+- var x = getX() <- does not derive x type to be getX() return value
+- mocking outside test methods 
+- assertThrows must be before verifications that depend on the call (replace when with assert, not throws(..))
+
