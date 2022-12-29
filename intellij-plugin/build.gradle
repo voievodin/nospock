@@ -23,5 +23,5 @@ patchPluginXml {
       <em>most HTML tags may be used</em>"""
 
     sinceBuild = "212"
-    untilBuild = "223"
+    untilBuild = "224"
 }
