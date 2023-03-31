@@ -9,6 +9,10 @@ repositories {
     mavenCentral()
 }
 
+wrapper {
+    gradleVersion = '8.0.2'
+}
+
 compileJava {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
