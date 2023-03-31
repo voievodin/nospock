@@ -15,7 +15,6 @@ compileJava {
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     version = '2021.2.3'
-
 }
 
 patchPluginXml {
@@ -24,5 +23,5 @@ patchPluginXml {
       <em>most HTML tags may be used</em>"""
 
     sinceBuild = "212"
-    untilBuild = "231"
+    untilBuild = "231.*"
 }
