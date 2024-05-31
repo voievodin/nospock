@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.intellij' version '1.13.3'
+    id 'org.jetbrains.intellij' version '1.17.3'
     id 'java'
 }
 
@@ -8,13 +8,12 @@ repositories {
 }
 
 compileJava {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
-// See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = '2021.2.3'
+    version = '2024.1.2'
 }
 
 patchPluginXml {
@@ -22,6 +21,6 @@ patchPluginXml {
       Add change notes here.<br>
       <em>most HTML tags may be used</em>"""
 
-    sinceBuild = "212"
-    untilBuild = "231.*"
+    sinceBuild = "241"
+    untilBuild = "241.*"
 }
