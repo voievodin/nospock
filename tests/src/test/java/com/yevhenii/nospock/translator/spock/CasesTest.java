@@ -24,13 +24,13 @@ class CasesTest {
   @ParameterizedTest
   @ValueSource(
     strings = {
-//      "AssertionsSpec",
-//      "MockInitializationSpec",
-//      "MockInteractionSpec",
-//      "ParameterisedSpec",
-//      "ThrownSpec",
-//      "LifecycleSpec",
-//      "StringsSpec",
+      "AssertionsSpec",
+      "MockInitializationSpec",
+      "MockInteractionSpec",
+      "ParameterisedSpec",
+      "ThrownSpec",
+      "LifecycleSpec",
+      "StringsSpec",
       "ArbitrarySpec"
     }
   )

@@ -23,7 +23,7 @@ public class ArrayExpressionTranslator implements ExpressionTranslator<ArrayExpr
   @Override
   public JArrayExpression translate(ArrayExpression node, TContext context) {
     return new JArrayExpression(
-      new JType(node.getType().getComponentType() + "[]"),
+      new JType(node.getType().getComponentType().toString(false) + "[]"),
       node.getExpressions() == null ? List.of() : TranslateHelper.translate(node.getExpressions(), exPool, context),
       node.getSizeExpression() == null ? List.of() : TranslateHelper.translate(node.getSizeExpression(), exPool, context)
     );
