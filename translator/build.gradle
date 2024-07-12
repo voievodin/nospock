@@ -10,10 +10,10 @@ repositories {
 dependencies {
     api project(":jast")
     
-    implementation 'org.codehaus.groovy:groovy-all:3.0.9'
+    implementation 'org.apache.groovy:groovy-all:4.0.21'
 }
 
 compileJava {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }

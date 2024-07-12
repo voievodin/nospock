@@ -38,10 +38,10 @@ class CasesTest {
     final var groovyPath = getGroovyPath(caseName);
     final var javaPath = getJavaPath(caseName);
 
-    assertEquals(
-      Files.readString(javaPath),
-      Defaults.translators().fileTranslator().translate(new SpockSourceFile(groovyPath)).asCode(Defaults.CODE_STYLE)
-    );
+    var javaString  = Files.readString(javaPath);
+    var groovyString = Defaults.translators().fileTranslator().translate(new SpockSourceFile(groovyPath)).asCode(Defaults.CODE_STYLE);
+
+    assertEquals(javaString, groovyString);
   }
 
   private static Path getGroovyPath(String name) {

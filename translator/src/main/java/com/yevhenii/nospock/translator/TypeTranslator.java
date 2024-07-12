@@ -8,7 +8,7 @@ import org.codehaus.groovy.ast.GenericsType;
 public class TypeTranslator implements Translator<ClassNode, JType> {
   @Override
   public JType translate(ClassNode node, TContext context) {
-    final var jType = new JType(node.isArray() ? node.getComponentType() + "[]" : node.getUnresolvedName());
+    final var jType = new JType(node.isArray() ? node.getComponentType().toString(false) + "[]" : node.getUnresolvedName());
     if (node.getGenericsTypes() != null) {
       jType.useGenerics(true);
       for (GenericsType genericsType : node.getGenericsTypes()) {
